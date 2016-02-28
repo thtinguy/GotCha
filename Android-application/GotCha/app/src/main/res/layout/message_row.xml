@@ -1,0 +1,36 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/f_Sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="From: "
+        android:focusable="false"
+        android:layout_below="@+id/f_Item"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/Sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:focusable="false"
+        android:layout_above="@+id/Message"
+        android:layout_toEndOf="@+id/f_Sender" />
+
+
+    <TextView
+        android:id="@+id/Message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_below="@+id/f_Sender"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

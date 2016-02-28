@@ -1,0 +1,45 @@
+Gotcha App - Back-end
+=================================
+
+1) Introduction
+
+This part of the project takes care of all of the back-end needs of the application. The goal is to create a RESTful API
+and have the application communicate with it.
+
+- This backend uses the version 2.4 of the Play Framework in Java : https://www.playframework.com/documentation/2.4.x/Installing
+- For hosting we will use Heroku : https://www.heroku.com
+- In terms of database and object persistence, we use the Ebean ORM which integrates with javax.peristence annotations : https://ebean-orm.github.io/quickstart
+- For the actual deployment database, as we are using Heroku we will use the integrated PostgreSQL database already hosted by Heroku : https://devcenter.heroku.com/articles/play-support
+
+2) Running on your local host
+
+Here is how to have the server running on your localhost:
+
+- Download the latest version of the typesafe activator : https://www.playframework.com/documentation/2.4.x/Installing
+- Make sure you are running a version >= 1.8 of the JDK as Play 2.4 has stopped support for older versions of Java
+- Open a command line instance and navigate to the root of the project
+- Start activator by typing : activator
+- Once activator has started up, you should now be in the activator REPL
+- To start the application type : run
+- The HTTP server should now be listening on the localhost port 9000
+- To access the application open up your web browser and type : localhost:9000
+- The application on first time start up will ask you to apply the database script which you can accept by clicking : apply script
+- The server is now listening up and running !
+
+3) Basic API description 
+
+Here are the temporary functionalities provided by the server:
+
+- The root url(localhost:9000) contains a simple html form which can be used to create simple items
+- The search form is very basic, and can be used to look for an Item with the keyword matching the name of the object. Results are returned as JSON
+- A call to localhost:9000/item/json will return all current Items as JSON
+
+4) Running Tests
+
+Here is how to run the test suite on your code. This functionality should be used
+to check if after modifying something you have not broken any tests.
+
+- Navigate to the server root directory
+- To run the tests type: activator test
+- This should display the test results shortly after running all of them
+

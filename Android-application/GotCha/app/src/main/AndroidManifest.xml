@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sweng.epfl.ch.gotcha" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true" >
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing" >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListActivity"
+            android:label="@string/title_activity_list" >
+            <meta-itemList
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sweng.epfl.ch.gotcha.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ItemActivity"
+            android:label="@string/title_activity_item" >
+            <meta-itemList
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sweng.epfl.ch.gotcha.ListActivity" />
+        </activity>
+        <activity
+            android:name=".MessageActivity"
+            android:fitsSystemWindows="true"
+            android:label="@string/title_activity_message"
+            android:parentActivityName=".ItemActivity"
+            android:windowSoftInputMode="adjustResize" >
+            <meta-itemList
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sweng.epfl.ch.gotcha.ItemActivity" />
+        </activity>
+        <activity
+            android:name=".GetFromGalleryActivity"
+            android:label="@string/title_activity_get_from_gallery" >
+        </activity>
+        <activity
+            android:name=".ReadMessage"
+            android:label="@string/title_activity_read_message"
+            android:parentActivityName=".MyMessageFragment" >
+            <meta-itemList
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sweng.epfl.ch.gotcha.MyMessageFragment" />
+        </activity>
+        <activity
+            android:name=".ReplyMessageActivity"
+            android:label="@string/title_activity_reply_message"
+            android:parentActivityName=".ReadMessage" >
+            <meta-itemList
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sweng.epfl.ch.gotcha.ReadMessage" />
+        </activity>
+        <activity
+            android:name=".UserProfileTequila"
+            android:label="User Profile">
+            <intent-filter>
+                <data
+                    android:host="login"
+                    android:scheme="gotcha" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+
+
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">GotCha</string>
+
+    <string name="title_section1">Categories</string>
+    <string name="title_section2a">Login</string>
+    <string name="title_section2b">Logout</string>
+    <string name="title_section3">Sell Item</string>
+    <string name="title_section4">My Messages</string>
+    <string name="title_section6">My Wish List</string>
+    <string name="title_section5">My Items</string>
+    <string name="myitems">MyItems</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="alert_success">Congratulations! Your item has been posted</string>
+    <string name="network_failure_title">Network failure</string>
+    <string name="alert_failure_network">Something went wrong when connecting with the server. Please check you network connection.</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="category_message">Please chose a category and try again</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_item">ItemActivity</string>
+    <string name="category_alert">Category not chosen!</string>
+    <string name="search_hint">Search for Something!</string>
+    <string name="search_title">Search</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_get_from_gallery">GetFromGalleryActivity</string>
+    <string name="alert_fail">Please fill in the form and try again</string>
+    <string name="miss_name">Missing Name info</string>
+    <string name="miss_price">Missing Price info</string>
+    <string name="miss_name_price">Missing Name, Price and Description info</string>
+    <string name="miss_description">Missing Description info</string>
+    <string name="noPicture">Please add a picture of your item</string>
+    <string name="noPicTitle">Picture not loaded</string>
+    <string name="no_items_message">There are no items in this category.</string>
+    <string name="no_myitems_message">You have not posted any items yet.</string>
+    <string name="not_signed_in_myitems_message">Sign in to see your posted items.</string>
+    <string name="no_search_results_message">There are no items that matches your search.</string>
+    <string name="loginAlert">You have to log in to sell an item</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello from my message fragment</string>
+    <string name="title_activity_read_message">ReadMessage</string>
+    <string name="title_activity_user_profile_tequila">UserProfileTequila</string>
+
+    <string name="deleteError">An error occurred. Item is not deleted</string>
+
+    <string name="title_activity_reply_message">ReplyMessageActivity</string>
+    <string name="back_user_profile">Back</string>
+    <string name="wishList">My wish list</string>
+    <string name="yourWishList"><u>Your wish list</u></string>
+
+</resources>

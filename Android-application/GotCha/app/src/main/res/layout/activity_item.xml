@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/itemView"
+    tools:context="sweng.epfl.ch.gotcha.ItemActivity">
+
+    <TextView
+        android:id="@+id/s_itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendMessageButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="159dp"
+        android:text="Item Name: "
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/s_itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/t_ItemName"
+        android:text="Description: "
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/s_itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/t_itemDescription"
+        android:text="Price: "
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/s_sellerContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/s_itemPrice"
+        android:text="Seller Contact: "
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/sendMessageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="writeMessage"
+        android:text="Send Message to seller" />
+
+    <TextView
+        android:id="@+id/t_ItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/s_itemName"
+        android:layout_toEndOf="@+id/s_itemDescription"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/t_itemDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/s_itemDescription"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/t_itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/s_sellerContact"
+        android:layout_toEndOf="@+id/s_itemPrice"
+        android:text="Fr. 64"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/sellerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_itemPrice"
+        android:layout_toEndOf="@+id/s_sellerContact"
+        android:text="seller@epfl.ch"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/item_picture"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/t_ItemName" />
+
+</RelativeLayout>

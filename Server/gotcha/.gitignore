@@ -1,0 +1,17 @@
+logs
+project/project
+project/target
+target
+tmp
+dist
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+.cache*
+bin/
+.history
+.sbtserver
+conf/evolutions

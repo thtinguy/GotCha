@@ -1,0 +1,89 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# Refer to project Wiki for full API description.
+# ~~~~
+
+#############
+# Home page #
+#############
+
+GET     /                           controllers.Application.index()
+
+#####################
+# Item related URLs #
+#####################
+
+# Creates a new item
+POST	/items						controllers.Application.createItem() 
+
+# Deletes an item
+POST 	/items/delete				controllers.Application.deleteItem()
+
+# Gets all items
+GET		/items/all					controllers.Application.getAllItems()
+
+# Gets the item with given id
+GET		/items/:id					controllers.Application.getItemWithId(id: Long)
+
+# Gets all items in the given category
+GET 	/items/category/:category	controllers.Application.getItemsWithCategory(category: String, page: Int ?= 1)
+
+# Search for items with given keyword
+GET		/items/all/filter			controllers.Application.filter(keyword: String ?= "", page: Int ?=1)
+
+#####################
+# User related URLs #
+#####################
+
+# Creates a new user
+POST	/users						controllers.Application.createUser()
+
+# Deletes a user
+POST	/users/delete				controllers.Application.deleteUser()
+
+# Gets all users
+GET		/users/all					controllers.Application.getAllUsers()
+
+# Gets the user with given id
+GET		/users/:id					controllers.Application.getUserWithId(id: Long)
+
+# Gets the items for the user with id
+GET		/users/:id/items			controllers.Application.getItemsForUserWithId(id: Long)
+
+# Gets the messages for the user with id
+GET		/users/:id/messages			controllers.Application.getMessagesForUserWithId(id: Long)
+
+# Gets the wishes for the user with id
+GET		/users/:id/wishes		    controllers.Application.getWishesForUserWithId(id: Long)
+
+#####################
+# Message related URLs #
+#####################
+
+# Creates a new message
+POST	/messages					controllers.Application.createMessage()
+
+# Deletes a message
+POST	/messages/delete			controllers.Application.deleteMessage()
+
+# Gets all messages
+GET		/messages/all				controllers.Application.getAllMessages()
+
+# Open a message
+POST	/messages/open				controllers.Application.openMessage()
+
+#####################
+# Wish related URLs #
+#####################
+
+# Creates a new wish
+POST	/wishes						controllers.Application.createWish()
+
+# Deletes a new wish
+POST	/wishes/delete			    controllers.Application.deleteWish()
+
+# Gets all wishes
+GET		/wishes/all				    controllers.Application.getAllWishes()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
